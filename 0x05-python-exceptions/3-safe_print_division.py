@@ -8,8 +8,6 @@ def safe_print_division(a, b):
     except Exception as e:
         print(f"Error: {e}")
         return None
-    else:
+    finally:
         print("Inside result: {}".format(result))
         return result
-    finally:
-        print("Inside finally")
