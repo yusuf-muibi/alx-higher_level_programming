@@ -1,18 +1,20 @@
 #!/usr/bin/python3
-"""This defines a text file insertion function"""
+"""This defines a text file insertion function."""
+
+
 def append_after(filename="", search_string="", new_string=""):
-    """Insert a line of text after each line containing a specific string.
+    """Insert a line text after each line containing a given string.
 
     Args:
-        filename (str): The name of the file to read and write.
-        search_string (str): The string to search for in each line.
-        new_string (str): The string to insert after each line containing the search string.
+        filename (str): The name of the file.
+        search_string (str): The string to search for within the file.
+        new_string (str): The string to insert.
     """
-    with open(filename, 'r') as f:
-        lines = f.readlines()
-
-    with open(filename, 'w') as f:
-        for line in lines:
-            f.write(line)
+    text = ""
+    with open(filename) as r:
+        for line in r:
+            text += line
             if search_string in line:
-                f.write(new_string + '\n')
+                text += new_string
+    with open(filename, "w") as w:
+        w.write(text)
