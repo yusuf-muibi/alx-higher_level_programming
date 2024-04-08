@@ -8,7 +8,7 @@ const lines = [
 
 let output = '';
 
-for (let i = 0; i < lines.length; ) {
+for (let i = 0; i < 3; ) {
 
   output += lines[i];
   output += '\n';
