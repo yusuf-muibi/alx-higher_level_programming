@@ -8,9 +8,11 @@ const lines = [
 
 let output = '';
 
-for (let i = 0; i < lines.length; i++) {
+for (let i = 0; i < lines.length; ) {
 
-  output += `${lines[i]}\n`;
+  output += lines[i];
+  output += '\n';
+  i++;
 }
 
 console.log(output);
