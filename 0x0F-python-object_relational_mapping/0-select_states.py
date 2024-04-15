@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-""" This lists all states from the database hbtn_0e_0_usa """
-import sys
+""" this lists all states from the database hbtn_0e_0_usa """
 import MySQLdb
+import sys
 
 def select_states(username, password, db_name):
     db = MySQLdb.connect(
@@ -12,19 +12,14 @@ def select_states(username, password, db_name):
         db=db_name
     )
     cursor = db.cursor()
-    sql = "SELECT * FROM states ORDER BY id ASC"
+    sql = "SELECT * FROM states"
     
-    try:
-        cursor.execute(sql)
-        results = cursor.fetchall()
-        for row in results:
+    cursor.execute(sql)
+    results = cursor.fetchall()
+    for row in results:
             print(row)
-    except MySQLdb.Error as e:
-        print("Error: unable to fetch data")
-        print(e)
-    finally:
-        cursor.close()
-        db.close()
+    cursor.close()
+    db.close()
 
 if __name__ == "__main__":
     if len(sys.argv) != 4:
