@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" this lists all states from the database hbtn_0e_0_usa """
+"""  lists all states from the database hbtn_0e_0_usa """
 import MySQLdb
 import sys
 
@@ -12,7 +12,7 @@ def select_states(username, password, db_name):
         db=db_name
     )
     cursor = db.cursor()
-    sql = "SELECT * FROM states ORDER BY states.id"
+    sql = """SELECT * FROM states ORDER BY states.id"""
 
     cursor.execute(sql)
     results = cursor.fetchall()
