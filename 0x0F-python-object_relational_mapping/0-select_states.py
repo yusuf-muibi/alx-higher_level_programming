@@ -13,7 +13,7 @@ def select_states(username, password, db_name):
     )
     cursor = db.cursor()
     sql = "SELECT * FROM states ORDER BY id ASC"
-    
+
     cursor.execute(sql)
     results = cursor.fetchall()
     for row in results:
