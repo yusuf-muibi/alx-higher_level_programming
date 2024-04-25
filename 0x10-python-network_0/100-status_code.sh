@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-"""Algorithm for finding a peak in a list of unsorted integers."""
+# This script sends a request to a URL and displays only the status code of the response.
 curl -so /dev/null -w "%{http_code}" "$1"
