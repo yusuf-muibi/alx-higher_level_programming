@@ -1,3 +1,3 @@
 #!/bin/bash
-# This script makes a request to 0.0.0.0:5000/catch_me and captures the response.
-curl -sL 0.0.0.0:5000/catch_me_3 -X PUT -H "Origin:HolbertonSchool"
+# This script sends a request to a URL and displays only the status code of the response.
+curl -so /dev/null -w "%{http_code}" "$1"
