@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Displays your GitHub user id using Basic Authentication with a personal access token.
+Takes your GitHub credentials (username and password) and uses the GitHub API
+to display your id
 """
 
 if __name__ == '__main__':
